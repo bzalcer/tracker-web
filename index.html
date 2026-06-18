@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pending Items</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- auth screen -->
+      <div id="auth-screen">
+        <div class="auth-card">
+          <h1>Pending Items</h1>
+          <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required autocomplete="email" />
+            <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
+            <button type="submit" id="login-btn">Sign in</button>
+            <p id="auth-error" class="error hidden"></p>
+            <p class="auth-toggle">
+              <span id="toggle-hint">Don't have an account?</span>
+              <button type="button" id="toggle-mode">Sign up</button>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- main app screen -->
+      <div id="main-screen" class="hidden">
+        <header>
+          <h1>Pending Items</h1>
+          <button id="logout-btn">Sign out</button>
+        </header>
+
+        <main>
+          <!-- add new heading -->
+          <form id="add-heading-form" class="add-heading-form">
+            <input type="text" id="new-heading" placeholder="New heading (person or topic)" />
+            <button type="submit">Add heading</button>
+          </form>
+
+          <!-- items grouped by heading -->
+          <div id="groups"></div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
