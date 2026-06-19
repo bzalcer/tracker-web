@@ -39,6 +39,26 @@
             <button type="submit">Add heading</button>
           </form>
 
+          <!-- filter / sort bar -->
+          <div id="filter-bar">
+            <div class="filter-group">
+              <label for="filter-heading">Heading</label>
+              <input type="text" id="filter-heading" placeholder="Search…" />
+            </div>
+            <div class="filter-group">
+              <label for="filter-due">Due by</label>
+              <input type="date" id="filter-due" />
+            </div>
+            <div class="filter-group">
+              <label for="filter-added">Added after</label>
+              <input type="date" id="filter-added" />
+            </div>
+            <label class="filter-sort-label">
+              <input type="checkbox" id="sort-due" />
+              Sort by due date
+            </label>
+          </div>
+
           <!-- items grouped by heading -->
           <div id="groups"></div>
         </main>
